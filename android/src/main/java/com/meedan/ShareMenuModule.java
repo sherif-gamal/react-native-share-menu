@@ -34,6 +34,11 @@ public class ShareMenuModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void returnToHost() {
+      getCurrentActivity().finish();
+  }
+
+  @ReactMethod
   public void clearSharedText() {
     Activity mActivity = getCurrentActivity();
     Intent intent = mActivity.getIntent();
